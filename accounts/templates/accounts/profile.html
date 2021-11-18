@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>{{ person.username }}님의 프로필</h1>
+
+{% with followings=person.followings.all followers=person.followers.all %}
+  <div>
+    <div>
+      팔로잉 : {{ followings|length }} /
+      팔로워 : <span id="followersCount">{{ followers|length }}</span>
+    </div>
+    {% if request.user != person %}
+      <div>
+        {% if request.user in followers %}
+          <button id="followBtn" class="btn btn-danger" data-user-id="{{ person.pk }}">Unfollow</button>
+        {% else %}
+          <button id="followBtn" class="btn btn-primary" data-user-id="{{ person.pk }}">Follow</button>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+{% endwith %}
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'accounts/js/profile.js' %}"></script>
+{% endblock script %}
