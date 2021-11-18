@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'reviews',
     'accounts',
+    'movies',
 
     'django_extensions',
     'bootstrap5',
