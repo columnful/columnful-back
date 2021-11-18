@@ -3,6 +3,11 @@ from django.views.decorators.http import require_GET, require_POST, require_http
 from .models import Review, Comment
 from .forms import ReviewForm, CommentForm
 from django.http.response import JsonResponse
+from .serializers import ReviewSerializer
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
 
 @require_GET
 def index(request):
@@ -13,12 +18,12 @@ def index(request):
     return render(request, 'reviews/index.html', context)
 
 
-@require_http_methods(['GET', 'POST'])
+@api_view(['GET', 'POST'])
 def create(request):
     if request.method == 'POST':
-        form = ReviewForm(request.POST) 
-        if form.is_valid():
-            review = form.save(commit=False)
+        serializer = ReviewSerializer(data=request.data) 
+        if serializer.is_valid():
+            review = serializer.save()
             review.user = request.user
             review.save()
             return redirect('reviews:detail', review.pk)

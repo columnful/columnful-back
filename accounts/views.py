@@ -7,25 +7,44 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST, require_http_methods
 from .forms import CustomUserCreationForm
+from rest_framework import status
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+from .serializers import UserSerializer
+from rest_framework.permissions import AllowAny
 
-
-@require_http_methods(['GET', 'POST'])
+@api_view(['GET', 'POST'])
+@permission_classes([AllowAny])
 def signup(request):
-    if request.user.is_authenticated:
-        return redirect('reviews:index')
+    password = request.data.get('password')
+    password_confirmation = request.data.get('passwordConfirmation')
 
-    if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            auth_login(request, user)
-            return redirect('reviews:index')
-    else:
-        form = CustomUserCreationForm()
-    context = {
-        'form': form,
-    }
-    return render(request, 'accounts/signup.html', context)
+    if password != password_confirmation:
+        return Response({'error': '비밀번호가 일치하지 않아요..'}, status=status.HTTP_400_BAD_REQUEST)
+
+    serializer = UserSerializer(data=request.data)
+
+    if serializer.is_valid(raise_exception=True):
+        user = serializer.save()
+        user.set_password(request.data.get('password'))
+        user.save()
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    # if request.user.is_authenticated:
+    #     return redirect('reviews:index')
+
+    # if request.method == 'POST':
+    #     form = CustomUserCreationForm(request.POST)
+    #     if form.is_valid():
+    #         user = form.save()
+    #         auth_login(request, user)
+    #         return redirect('reviews:index')
+    # else:
+    #     form = CustomUserCreationForm()
+    # context = {
+    #     'form': form,
+    # }
+    # return render(request, 'accounts/signup.html', context)
 
 
 @require_http_methods(['GET', 'POST'])

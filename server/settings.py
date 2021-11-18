@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import datetime
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1)
+}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +30,7 @@ SECRET_KEY = 'django-insecure-8&y(ih)*ratj!zs_!_ugvky+02w#)(h^o202*=d-p+fkoqxd^+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'bootstrap5',
+    'rest_framework',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -132,3 +138,12 @@ AUTH_USER_MODEL = 'accounts.User'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
+}
