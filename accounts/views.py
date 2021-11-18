@@ -17,7 +17,7 @@ from rest_framework.permissions import AllowAny
 @permission_classes([AllowAny])
 def signup(request):
     password = request.data.get('password')
-    password_confirmation = request.data.get('passwordConfirmation')
+    password_confirmation = request.data.get('passwordConfirm')
 
     if password != password_confirmation:
         return Response({'error': '비밀번호가 일치하지 않아요..'}, status=status.HTTP_400_BAD_REQUEST)
