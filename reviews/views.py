@@ -26,7 +26,7 @@ def create(request):
             serializer.save(user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
     else:
-        reviews = request.user.review_set.all()
+        reviews = Review.objects.order_by('-pk')
         serializer= ReviewSerializer(reviews, many=True)
         return Response(serializer.data)
 
