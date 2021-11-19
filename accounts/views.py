@@ -30,21 +30,6 @@ def signup(request):
         user.save()
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    # if request.user.is_authenticated:
-    #     return redirect('reviews:index')
-
-    # if request.method == 'POST':
-    #     form = CustomUserCreationForm(request.POST)
-    #     if form.is_valid():
-    #         user = form.save()
-    #         auth_login(request, user)
-    #         return redirect('reviews:index')
-    # else:
-    #     form = CustomUserCreationForm()
-    # context = {
-    #     'form': form,
-    # }
-    # return render(request, 'accounts/signup.html', context)
 
 
 @require_http_methods(['GET', 'POST'])

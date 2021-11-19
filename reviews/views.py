@@ -22,17 +22,13 @@ def index(request):
 def create(request):
     if request.method == 'POST':
         serializer = ReviewSerializer(data=request.data) 
-        if serializer.is_valid():
-            review = serializer.save()
-            review.user = request.user
-            review.save()
-            return redirect('reviews:detail', review.pk)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
     else:
-        form = ReviewForm()
-    context = {
-        'form': form,
-    }
-    return render(request, 'reviews/create.html', context)
+        reviews = request.user.review_set.all()
+        serializer= ReviewSerializer(reviews, many=True)
+        return Response(serializer.data)
 
 
 @require_GET
