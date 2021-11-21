@@ -6,4 +6,5 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = '__all__'
-        read_only_fields = ('user', 'honor', 'movie_title', 'rank' )  # username 나중에 생각해주기
+        read_only_fields = ('user', 'username', 'honor', 'movie_title', 'rank' )  
+        # username이 있어야 vue에서 review를 통해 username을 가져올 수 있고, username을 가져와야 현재 로그인 한 유저와 일치하는 지 확인 후 update delete 가능

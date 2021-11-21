@@ -23,7 +23,7 @@ def review_create_read(request):
     if request.method == 'POST':
         serializer = ReviewSerializer(data=request.data) 
         if serializer.is_valid(raise_exception=True):
-            serializer.save(user=request.user)
+            serializer.save(user=request.user, username=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
     else:
         reviews = Review.objects.order_by('-pk')
