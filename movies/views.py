@@ -1,47 +1,57 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.views.decorators.http import require_safe
-from django.core import serializers
-from django.http import HttpResponse
-from .models import Movie
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from django.contrib.auth import get_user_model
 from django.core.paginator import Paginator
-# from django_random_queryset import RandomManager
 
-# Create your views here.
-@require_safe
-def index(request):
-    movies = Movie.objects.all()
-    paginator = Paginator(movies, 10)
+from rest_framework import status
+from rest_framework.decorators import api_view, permissions_classes
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
 
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-
-    # /movies/?page=2 ajax 요청 => json
-    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-        data = serializers.serialize('json', page_obj)
-        return HttpResponse(data, content_type='application/json')
-    # /movies/ 첫번째 페이지 요청 => html
-    else:
-        context = {
-            'movies': page_obj,
-        }
-
-        return render(request, 'movies/index.html', context)
+from .models import Movie
+from .serializers import MovieListSerializer, MovieDetailSerializer
 
 
-@require_safe
-def detail(request, movie_pk):
-    movie = get_object_or_404(Movie, pk=movie_pk)
-    context = {
-        'movie': movie,
-    }
-    return render(request, 'movies/detail.html', context)
+@api_view(['GET'])
+@permissions_classes([AllowAny])
+def movie_list(request):
+  movies = Movie.objects.all()
+  serializer = MovieListSerializer(movies, many=True)
+  return Response(serializer.data)
 
 
-# @require_safe
-# def recommended(request):
-#     queryset = Movie.objects.all()
-#     movie = queryset.random(10)
-#     context = {
-#         'movies' : movie,
-#     }
-#     return render(request, 'movies/recommended.html', context)
+@api_view(['GET'])
+@permissions_classes([AllowAny])
+def movie_detail(request, movie_id):
+  movie = Movie.objects.get(pk=movie_id)
+  serializer = MovieDetailSerializer(movie)
+  return Response(serializer.data)
+
+
+@api_view(['POST'])
+def like(request, movie_id):
+  movie = get_object_or_404(Movie, pk=movie_id)
+  user = request.user
+
+  if movie.like_user.filter(pk=user.pk).exists():
+    movie.like_user.remove(user.pk)
+    liked = False
+  else:
+    movie.like_user.add(user.pk)
+    liked = True
+    
+  like_status = {
+    'liked': liked,
+    'count': movie.like_user.count()
+  }
+  return JsonResponse(like_status)
+
+
+@api_view(['GET'])
+def review_recommend(request):
+  pass
+
+
+@api_view(['GET'])
+def recommend_movie_actors(request):
+  pass

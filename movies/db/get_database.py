@@ -11,7 +11,7 @@ def get_movies_popular():
     movies_db = []
     actors_list_db = []
     directors_list_db = []
-    tmdb_helper = TMDBHelper('TMDB_API_KEY')
+    tmdb_helper = TMDBHelper('d96fad9400bff08e7653e874066ac99b')
 
     for i in range(1, 500):
         request_url = tmdb_helper.get_request_url(method = '/movie/popular', language = 'ko', page=i)
@@ -25,8 +25,13 @@ def get_movies_popular():
             credits_info = requests.get(credits_request_url).json()
             # pdb.set_trace()
 
+            keywords_request_url = tmdb_helper.get_request_url(method =f'/movie/{movie_id}/keywords', language = 'ko')
+            keywords_data = requests.get(keywords_request_url).json()
+
             actors = credits_info.get('cast')
             directors = credits_info.get('crew')
+            keywords = keywords_data.get('keywords')
+
             actors_list = []
             directors_list = []
 
@@ -44,6 +49,8 @@ def get_movies_popular():
 
             data['actors'] = actors_list
             data['directors'] = directors_list
+            data['keywords'] = keywords
+
             # pdb.set_trace()
             results = {
                 'model': 'movies.movie',
@@ -57,7 +64,7 @@ def get_movies_popular():
 
 
 def get_people(person_ids, job_string):
-    tmdb_helper = TMDBHelper('TMDB_API_KEY')
+    tmdb_helper = TMDBHelper('d96fad9400bff08e7653e874066ac99b')
     people_db = []
 
     for person_id in person_ids:

@@ -1,5 +1,6 @@
 from django.db import models
-# from django_random_queryset import RandomManager
+from django.conf import settings
+
 
 class Genre(models.Model):
     name = models.CharField(max_length=50)
@@ -10,14 +11,17 @@ class Genre(models.Model):
 
 class Actor(models.Model):
     name = models.CharField(max_length=100)
-    # profile_path = 
+    profile_path = models.TextField(null=True)
     # also_known_as = 
 
-# class Director(models.Model):
+
+class Director(models.Model):
+    name= models.CharField(max_length=100)
+    profile_path = models.TextField(null=True)
 
 
 class Movie(models.Model):
-    # id = models.ImageField(primary_key=True)
+    # id = models.IntegerField(primary_key=True)
     adult = models.BooleanField()
     genres = models.ManyToManyField(Genre)
     original_title = models.CharField(max_length=200)
@@ -28,7 +32,11 @@ class Movie(models.Model):
     title = models.CharField(max_length=100)
     vote_average = models.FloatField()
     vote_count = models.IntegerField()
+    like_user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="like_movie", default=None)
 
     actors = models.ManyToManyField(Actor)
 
-    # objects = RandomManager()
+    directors = models.ManyToManyField(Director)
+
+    def __str__(self):
+        return self.title
