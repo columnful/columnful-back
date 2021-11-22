@@ -7,9 +7,10 @@ from tmdb_helper import TMDBHelper
 
 
 
-def get_movie_popular():
+def get_movies_popular():
     movies_db = []
     actors_list_db = []
+    directors_list_db = []
     tmdb_helper = TMDBHelper('TMDB_API_KEY')
 
     for i in range(1, 500):
@@ -38,6 +39,9 @@ def get_movie_popular():
             for director in directors:
                 if director['job'] == 'Director':
                     directors_list.append(director['id'])
+                    if director not in directors_list_db:
+                        directors_list_db.append(director['id'])
+
             data['actors'] = actors_list
             data['directors'] = directors_list
             # pdb.set_trace()
@@ -48,32 +52,32 @@ def get_movie_popular():
 
             movies_db.append(results)
 
-        return movies_db, actors_list_db
+        return movies_db, actors_list_db, directors_list_db
 
 
 
-def get_actors(actors_id_list):
+def get_people(person_ids, job_string):
     tmdb_helper = TMDBHelper('TMDB_API_KEY')
-    actors_db = []
+    people_db = []
 
-    for actor_id in actors_id_list:
-        actor_request_url = tmdb_helper.get_request_url(method=f'/person/{actor_id}', language = 'ko')
-        actor = requests.get(actor_request_url).json()
+    for person_id in person_ids:
+        person_request_url = tmdb_helper.get_request_url(method=f'/person/{person_id}', language = 'ko')
+        person = requests.get(person_request_url).json()
 
         results = {
-            'model': 'movies.actor',
+            'model': f'movies.{job_string}',
             'fields': {
-                'id': actor['id'],
-                'name': actor['name'],
-                'also_known_as': actor['also_known_as'],
-                'gender': actor['gender'],
-                'profile_path': actor['profile_path']
+                'id': person['id'],
+                'name': person['name'],
+                'also_known_as': person['also_known_as'],
+                'gender': person['gender'],
+                'profile_path': person['profile_path']
             }
         }
 
-        actors_db.append(results)
+        people_db.append(results)
     
-    return actors_db
+    return people_db
 
 
 
@@ -85,13 +89,11 @@ def to_json(filename, data):
 
 if __name__ == '__main__':
 
-    movies, actors_list = get_movie_popular()
-    actors = get_actors(actors_list)
+    movies, actors_list, directors_list = get_movies_popular()
+
+    actors = get_people(actors_list, 'actor')
+    directors = get_people(directors_list, 'director')
 
     to_json('../fixtures/movies.json', movies)
     to_json('../fixtures/actors.json', actors)
-
-    # to_json('movies.json', movies)
-    # to_json('actors.json', actors)
-
-    
+    to_json('../fixtures/directors.json', directors)

@@ -1,0 +1,239 @@
+[
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1144604,
+			"name": "Destin Daniel Cretton",
+			"also_known_as": [
+				"Destin Cretton"
+			],
+			"gender": 2,
+			"profile_path": "/6pOwxAXGsaqjlJmAdz9k3UArBdS.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 57633,
+			"name": "Rawson Marshall Thurber",
+			"also_known_as": [
+				"Rawson Thurber"
+			],
+			"gender": 2,
+			"profile_path": "/4gpzB12oy73qr5nWNNyZICz9nFB.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1333,
+			"name": "Andy Serkis",
+			"also_known_as": [
+				"أندي سركيس",
+				"앤디 서키스",
+				"アンディ・サーキス",
+				"Энди Серкис",
+				"安迪·瑟克斯",
+				"Άντι Σέρκις"
+			],
+			"gender": 2,
+			"profile_path": "/2aJLwOQK50Lx7PvIHGW1GMytTOL.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 87257,
+			"name": "Cary Joji Fukunaga",
+			"also_known_as": [
+				"Cary Joji Fukanaga",
+				"Cary Jôji Fukunaga ",
+				"Cary Fukunaga"
+			],
+			"gender": 2,
+			"profile_path": "/qhrtYCUM2NEaqVP3oB7vqkOTpx0.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 68573,
+			"name": "Walt Becker",
+			"also_known_as": [],
+			"gender": 2,
+			"profile_path": "/mxhqwB0WjXjVH8EgjWDmACPKLxP.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 114404,
+			"name": "Miguel Sapochnik",
+			"also_known_as": [
+				"Miguel Rosenberg",
+				"Miguel Rosenberg-Sapochnik ",
+				"Мигель Сапочник"
+			],
+			"gender": 2,
+			"profile_path": "/jlZGTjiifvvFDoEtlwrKz7QxuJS.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 2613318,
+			"name": "Edward Drake",
+			"also_known_as": [
+				"Edward John Drake",
+				"E.J. Drake"
+			],
+			"gender": 2,
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1668693,
+			"name": "Izu Ojukwu",
+			"also_known_as": [],
+			"gender": 2,
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1293994,
+			"name": "Jon Watts",
+			"also_known_as": [
+				"Джон Уоттс"
+			],
+			"gender": 2,
+			"profile_path": "/fkXChMX6CUXY1yOxBehAzvaTCl7.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1395183,
+			"name": "Chloé Zhao",
+			"also_known_as": [
+				"赵婷",
+				"클로이 자오"
+			],
+			"gender": 1,
+			"profile_path": "/4Zmu4uigEtq5qAwJKQZW5e2QhDg.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1448492,
+			"name": "Castille Landon",
+			"also_known_as": [],
+			"gender": 1,
+			"profile_path": "/s1oXtmqyG9X0uDfiU5HidPB6BJx.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 137427,
+			"name": "Denis Villeneuve",
+			"also_known_as": [
+				"드니 빌뇌브",
+				"丹尼斯·维勒弗",
+				"Дени Вильнёв",
+				"Дени Вильнев",
+				"丹尼斯·维伦纽瓦"
+			],
+			"gender": 2,
+			"profile_path": "/zdDx9Xs93UIrJFWYApYR28J8M6b.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1059578,
+			"name": "Jeymes Samuel",
+			"also_known_as": [
+				"The Bullitts"
+			],
+			"gender": 2,
+			"profile_path": "/uDmJwZHQQ52H70QoYjGSwrHeVue.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 16808,
+			"name": "Matthias Schweighöfer",
+			"also_known_as": [],
+			"gender": 2,
+			"profile_path": "/i4c5JjvC5EpecZbp4J96mFmtm0Z.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 6733,
+			"name": "Dan Mazer",
+			"also_known_as": [],
+			"gender": 2,
+			"profile_path": "/AibJrdiVq0nZmSeNAGSrlY0yIi1.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 17825,
+			"name": "Shawn Levy",
+			"also_known_as": [
+				"Shawn Adam Levy"
+			],
+			"gender": 2,
+			"profile_path": "/b1ulkCHz8biG87LjLQQiMCebEZo.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1614750,
+			"name": "Andres Beltran",
+			"also_known_as": [],
+			"gender": 2,
+			"profile_path": null
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 87742,
+			"name": "Marc Webb",
+			"also_known_as": [],
+			"gender": 2,
+			"profile_path": "/bWN7EexCL0H52bOuyVWvxRUu1H5.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 91268,
+			"name": "Ruben Fleischer",
+			"also_known_as": [],
+			"gender": 2,
+			"profile_path": "/3JLxOPFTLigSy8FjFjDyMwD9GIp.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 3242711,
+			"name": "McKenna Jean Harris",
+			"also_known_as": [],
+			"gender": 0,
+			"profile_path": null
+		}
+	}
+]
