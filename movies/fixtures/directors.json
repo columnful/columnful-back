@@ -129,16 +129,6 @@
 	{
 		"model": "movies.director",
 		"fields": {
-			"id": 1448492,
-			"name": "Castille Landon",
-			"also_known_as": [],
-			"gender": 1,
-			"profile_path": "/s1oXtmqyG9X0uDfiU5HidPB6BJx.jpg"
-		}
-	},
-	{
-		"model": "movies.director",
-		"fields": {
 			"id": 137427,
 			"name": "Denis Villeneuve",
 			"also_known_as": [
@@ -155,23 +145,11 @@
 	{
 		"model": "movies.director",
 		"fields": {
-			"id": 1059578,
-			"name": "Jeymes Samuel",
-			"also_known_as": [
-				"The Bullitts"
-			],
-			"gender": 2,
-			"profile_path": "/uDmJwZHQQ52H70QoYjGSwrHeVue.jpg"
-		}
-	},
-	{
-		"model": "movies.director",
-		"fields": {
-			"id": 16808,
-			"name": "Matthias Schweighöfer",
+			"id": 1448492,
+			"name": "Castille Landon",
 			"also_known_as": [],
-			"gender": 2,
-			"profile_path": "/i4c5JjvC5EpecZbp4J96mFmtm0Z.jpg"
+			"gender": 1,
+			"profile_path": "/s1oXtmqyG9X0uDfiU5HidPB6BJx.jpg"
 		}
 	},
 	{
@@ -194,6 +172,28 @@
 			],
 			"gender": 2,
 			"profile_path": "/b1ulkCHz8biG87LjLQQiMCebEZo.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 1059578,
+			"name": "Jeymes Samuel",
+			"also_known_as": [
+				"The Bullitts"
+			],
+			"gender": 2,
+			"profile_path": "/uDmJwZHQQ52H70QoYjGSwrHeVue.jpg"
+		}
+	},
+	{
+		"model": "movies.director",
+		"fields": {
+			"id": 16808,
+			"name": "Matthias Schweighöfer",
+			"also_known_as": [],
+			"gender": 2,
+			"profile_path": "/i4c5JjvC5EpecZbp4J96mFmtm0Z.jpg"
 		}
 	},
 	{
@@ -229,11 +229,13 @@
 	{
 		"model": "movies.director",
 		"fields": {
-			"id": 3242711,
-			"name": "McKenna Jean Harris",
-			"also_known_as": [],
+			"id": 2114371,
+			"name": "Alexandre Moratto",
+			"also_known_as": [
+				"Alex Moratto"
+			],
 			"gender": 0,
-			"profile_path": null
+			"profile_path": "/W7BqXUyCHCqeGZjlwnd7w2V73I.jpg"
 		}
 	}
 ]

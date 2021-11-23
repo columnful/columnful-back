@@ -60,6 +60,20 @@
 					"id": 265894,
 					"name": "marvel comics"
 				}
+			],
+			"genres": [
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 12,
+					"name": "모험"
+				},
+				{
+					"id": 14,
+					"name": "판타지"
+				}
 			]
 		}
 	},
@@ -124,6 +138,24 @@
 				{
 					"id": 288041,
 					"name": "刺激"
+				}
+			],
+			"genres": [
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 35,
+					"name": "코미디"
+				},
+				{
+					"id": 80,
+					"name": "범죄"
+				},
+				{
+					"id": 53,
+					"name": "스릴러"
 				}
 			]
 		}
@@ -201,6 +233,20 @@
 					"id": 265894,
 					"name": "marvel comics"
 				}
+			],
+			"genres": [
+				{
+					"id": 878,
+					"name": "SF"
+				},
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 12,
+					"name": "모험"
+				}
 			]
 		}
 	},
@@ -257,6 +303,20 @@
 					"id": 244739,
 					"name": "007"
 				}
+			],
+			"genres": [
+				{
+					"id": 12,
+					"name": "모험"
+				},
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 53,
+					"name": "스릴러"
+				}
 			]
 		}
 	},
@@ -304,6 +364,20 @@
 				{
 					"id": 162628,
 					"name": "giant dog"
+				}
+			],
+			"genres": [
+				{
+					"id": 16,
+					"name": "애니메이션"
+				},
+				{
+					"id": 35,
+					"name": "코미디"
+				},
+				{
+					"id": 10751,
+					"name": "가족"
 				}
 			]
 		}
@@ -357,6 +431,20 @@
 					"id": 285366,
 					"name": "post-apocalyptic"
 				}
+			],
+			"genres": [
+				{
+					"id": 878,
+					"name": "SF"
+				},
+				{
+					"id": 18,
+					"name": "드라마"
+				},
+				{
+					"id": 12,
+					"name": "모험"
+				}
 			]
 		}
 	},
@@ -373,9 +461,9 @@
 			"id": 763164,
 			"original_language": "en",
 			"original_title": "Apex",
-			"overview": "현실과 가상이 뒤섞인 '에이펙스' 섬에 모여 인간 사냥을 게임을 즐기는 사냥꾼들에 맞서 사냥감이 된 남자가 펼치는 생존 전략을 그린 영화",
+			"overview": "상류층 부자들은 현실과 가상이 뒤섞인 에이펙스 섬에 모여 거액의 돈을 지불하고 인간 사냥을 즐긴다. 그 때, 무기징역을 받고 평생 감옥에 갇혀 살아야 했던 멀론이 그들의 사냥감으로 선택되는데 6명의 사냥꾼들은 멀론의 노쇠한 외모를 보고 그의 실력을 믿지 않는다. 전직 경찰로 웬만한 특수 요원보다 죽을 고비를 더 많이 넘겼던 멀론… 완전무장한 사냥꾼들로부터 살아남기 위해 완벽한 생존 전략을 세워야 하는데…",
 			"popularity": 2325.571,
-			"poster_path": "/chTkFGToW5bsyw3hgLAe4S5Gt3.jpg",
+			"poster_path": "/oyYS1EJm7fB3XogtXTOp5a2OPbA.jpg",
 			"release_date": "2021-11-12",
 			"title": "에이펙스",
 			"video": false,
@@ -433,6 +521,20 @@
 					"id": 285486,
 					"name": "explosions"
 				}
+			],
+			"genres": [
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 53,
+					"name": "스릴러"
+				},
+				{
+					"id": 878,
+					"name": "SF"
+				}
 			]
 		}
 	},
@@ -489,6 +591,24 @@
 				{
 					"id": 287834,
 					"name": "based on true events"
+				}
+			],
+			"genres": [
+				{
+					"id": 10752,
+					"name": "전쟁"
+				},
+				{
+					"id": 36,
+					"name": "역사"
+				},
+				{
+					"id": 18,
+					"name": "드라마"
+				},
+				{
+					"id": 12,
+					"name": "모험"
 				}
 			]
 		}
@@ -549,6 +669,20 @@
 				{
 					"id": 180547,
 					"name": "marvel cinematic universe (mcu)"
+				}
+			],
+			"genres": [
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 12,
+					"name": "모험"
+				},
+				{
+					"id": 878,
+					"name": "SF"
 				}
 			]
 		}
@@ -626,68 +760,19 @@
 					"id": 244445,
 					"name": "god-like"
 				}
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"fields": {
-			"adult": false,
-			"backdrop_path": "/lV3UFPPxDIPelh46G9oySXN9Mcz.jpg",
-			"genre_ids": [
-				10749,
-				18
 			],
-			"id": 744275,
-			"original_language": "en",
-			"original_title": "After We Fell",
-			"overview": "영국 런던에서 미국 시애틀까지, 핫스팟에서 시작된 사랑의 클라이맥스! 첫사랑, 첫키스, 첫경험, 설렘 가득했던 처음을 뒤로 하고 꿈을 위해 잠시 서로를 떠나게 된 하딘과 테사. 각자 영국 런던과 미국 시애틀에서 롱디 연애를 앞둔 두 사람은 시간과 장소를 가리지 않고 달콤한 사랑을 속삭인다. 하지만 연애와 꿈의 갈림길에 선 둘은 서로에게 감춘 '누군가'의 존재와 예상치 못한 비밀까지 알게 되면서 사랑의 클라이맥스에 치닫게 되는데…",
-			"popularity": 1805.085,
-			"poster_path": "/o0PgoBD6jLYId3LYpu9yUY06SLT.jpg",
-			"release_date": "2021-09-01",
-			"title": "애프터: 관계의 함정",
-			"video": false,
-			"vote_average": 7.2,
-			"vote_count": 915,
-			"actors": [
-				1753914,
-				1114487,
-				20805,
-				2035329,
-				20960,
-				20373,
-				32203,
-				23931,
-				1845809,
-				142115
-			],
-			"directors": [
-				1448492
-			],
-			"keywords": [
+			"genres": [
 				{
-					"id": 818,
-					"name": "based on novel or book"
+					"id": 28,
+					"name": "액션"
 				},
 				{
-					"id": 3371,
-					"name": "family history"
+					"id": 12,
+					"name": "모험"
 				},
 				{
-					"id": 9673,
-					"name": "love"
-				},
-				{
-					"id": 10791,
-					"name": "teenage crush"
-				},
-				{
-					"id": 187056,
-					"name": "woman director"
-				},
-				{
-					"id": 190491,
-					"name": "family tension"
+					"id": 878,
+					"name": "SF"
 				}
 			]
 		}
@@ -828,67 +913,15 @@
 					"id": 286709,
 					"name": "giant creature"
 				}
-			]
-		}
-	},
-	{
-		"model": "movies.movie",
-		"fields": {
-			"adult": false,
-			"backdrop_path": "/d0mpUFKzoPwF1KsdjHpkkaYSvKm.jpg",
-			"genre_ids": [
-				37
 			],
-			"id": 618162,
-			"original_language": "en",
-			"original_title": "The Harder They Fall",
-			"overview": "황야의 무법자 냇 러브(조너선 메이저스)는 숙적 루퍼스 벅(이드리스 엘바)이 출소한다는 소식에 흩어졌던 팀을 불러 모아 미뤄뒀던 복수를 다시 시작한다. 이 계획에 함께 뛰어든 이들은 옛 연인 '역마차' 메리(자시 베츠), ‘왼팔이자 오른팔’인 성질 나쁜 빌 피켓(에디 가세기)과 빠른 총잡이 짐 벡워스(RJ 사일러) 그리고 어제의 적에서 오늘의 아군으로 돌아선 미지의 인물 등이 있다. 하지만 루퍼스 벅 일당도 만만치 않다. 위험천만한 트루디 스미스(레지나 킹), 체로키 빌(러키스 스탠필드) 같은 사전에 패배란 없는 무시무시한 강자들이 합류해 힘을 보탠다.",
-			"popularity": 1604.043,
-			"poster_path": "/dv8KHbhCTqPZ1qfuf8XZRiY5a6f.jpg",
-			"release_date": "2021-10-22",
-			"title": "더 하더 데이 폴",
-			"video": false,
-			"vote_average": 6.8,
-			"vote_count": 327,
-			"actors": [
-				1674162,
-				17605,
-				9788,
-				1545693,
-				18792,
-				1853909,
-				1200864,
-				39391,
-				1394670,
-				216140
-			],
-			"directors": [
-				1059578
-			],
-			"keywords": [
+			"genres": [
 				{
-					"id": 378,
-					"name": "prison"
+					"id": 878,
+					"name": "SF"
 				},
 				{
-					"id": 3398,
-					"name": "release from prison"
-				},
-				{
-					"id": 9748,
-					"name": "revenge"
-				},
-				{
-					"id": 10511,
-					"name": "western"
-				},
-				{
-					"id": 155291,
-					"name": "cowboy"
-				},
-				{
-					"id": 155573,
-					"name": "wild west"
+					"id": 12,
+					"name": "모험"
 				}
 			]
 		}
@@ -897,62 +930,71 @@
 		"model": "movies.movie",
 		"fields": {
 			"adult": false,
-			"backdrop_path": "/mu8RKavbv7Ml48twHQ6XVk7zw8e.jpg",
+			"backdrop_path": "/lV3UFPPxDIPelh46G9oySXN9Mcz.jpg",
 			"genre_ids": [
-				28,
-				80,
-				53
+				10749,
+				18
 			],
-			"id": 796499,
+			"id": 744275,
 			"original_language": "en",
-			"original_title": "Army of Thieves",
-			"overview": "작은 도시의 은행원에게 미스터리의 여인이 접근한다. 그녀가 건넨 위험한 제안. 철통같기로 이름난 유럽 전역의 금고를 털자는 것이다. \"아미 오브 더 데드\"의 프리퀄.",
-			"popularity": 1566.278,
-			"poster_path": "/iPTZGFmPs7HsXHYxiuxGolihjOH.jpg",
-			"release_date": "2021-10-27",
-			"title": "아미 오브 더 데드: 도둑들",
+			"original_title": "After We Fell",
+			"overview": "영국 런던에서 미국 시애틀까지, 핫스팟에서 시작된 사랑의 클라이맥스! 첫사랑, 첫키스, 첫경험, 설렘 가득했던 처음을 뒤로 하고 꿈을 위해 잠시 서로를 떠나게 된 하딘과 테사. 각자 영국 런던과 미국 시애틀에서 롱디 연애를 앞둔 두 사람은 시간과 장소를 가리지 않고 달콤한 사랑을 속삭인다. 하지만 연애와 꿈의 갈림길에 선 둘은 서로에게 감춘 '누군가'의 존재와 예상치 못한 비밀까지 알게 되면서 사랑의 클라이맥스에 치닫게 되는데…",
+			"popularity": 1805.085,
+			"poster_path": "/o0PgoBD6jLYId3LYpu9yUY06SLT.jpg",
+			"release_date": "2021-09-01",
+			"title": "애프터: 관계의 함정",
 			"video": false,
-			"vote_average": 7,
-			"vote_count": 741,
+			"vote_average": 7.2,
+			"vote_count": 915,
 			"actors": [
-				16808,
-				1251069,
-				229396,
-				1403559,
-				2037501,
-				129765,
-				1767809,
-				11248,
-				1781390,
-				1984784
+				1753914,
+				1114487,
+				20805,
+				2035329,
+				20960,
+				20373,
+				32203,
+				23931,
+				1845809,
+				142115
 			],
 			"directors": [
-				16808
+				1448492
 			],
 			"keywords": [
 				{
-					"id": 1295,
-					"name": "europe"
+					"id": 818,
+					"name": "based on novel or book"
 				},
 				{
-					"id": 6710,
-					"name": "interpol"
+					"id": 3371,
+					"name": "family history"
 				},
 				{
-					"id": 9675,
-					"name": "prequel"
+					"id": 9673,
+					"name": "love"
 				},
 				{
-					"id": 12377,
-					"name": "zombie"
+					"id": 10791,
+					"name": "teenage crush"
 				},
 				{
-					"id": 159339,
-					"name": "safecracker"
+					"id": 187056,
+					"name": "woman director"
 				},
 				{
-					"id": 161966,
-					"name": "bank teller"
+					"id": 190491,
+					"name": "family tension"
+				}
+			],
+			"genres": [
+				{
+					"id": 10749,
+					"name": "로맨스"
+				},
+				{
+					"id": 18,
+					"name": "드라마"
 				}
 			]
 		}
@@ -1008,6 +1050,16 @@
 				{
 					"id": 207317,
 					"name": "christmas"
+				}
+			],
+			"genres": [
+				{
+					"id": 10751,
+					"name": "가족"
+				},
+				{
+					"id": 35,
+					"name": "코미디"
 				}
 			]
 		}
@@ -1090,6 +1142,170 @@
 					"id": 276747,
 					"name": "heroic"
 				}
+			],
+			"genres": [
+				{
+					"id": 35,
+					"name": "코미디"
+				},
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 12,
+					"name": "모험"
+				},
+				{
+					"id": 878,
+					"name": "SF"
+				}
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"fields": {
+			"adult": false,
+			"backdrop_path": "/d0mpUFKzoPwF1KsdjHpkkaYSvKm.jpg",
+			"genre_ids": [
+				37
+			],
+			"id": 618162,
+			"original_language": "en",
+			"original_title": "The Harder They Fall",
+			"overview": "황야의 무법자 냇 러브(조너선 메이저스)는 숙적 루퍼스 벅(이드리스 엘바)이 출소한다는 소식에 흩어졌던 팀을 불러 모아 미뤄뒀던 복수를 다시 시작한다. 이 계획에 함께 뛰어든 이들은 옛 연인 '역마차' 메리(자시 베츠), ‘왼팔이자 오른팔’인 성질 나쁜 빌 피켓(에디 가세기)과 빠른 총잡이 짐 벡워스(RJ 사일러) 그리고 어제의 적에서 오늘의 아군으로 돌아선 미지의 인물 등이 있다. 하지만 루퍼스 벅 일당도 만만치 않다. 위험천만한 트루디 스미스(레지나 킹), 체로키 빌(러키스 스탠필드) 같은 사전에 패배란 없는 무시무시한 강자들이 합류해 힘을 보탠다.",
+			"popularity": 1604.043,
+			"poster_path": "/dv8KHbhCTqPZ1qfuf8XZRiY5a6f.jpg",
+			"release_date": "2021-10-22",
+			"title": "더 하더 데이 폴",
+			"video": false,
+			"vote_average": 6.8,
+			"vote_count": 327,
+			"actors": [
+				1674162,
+				17605,
+				9788,
+				1545693,
+				18792,
+				1853909,
+				1200864,
+				39391,
+				1394670,
+				216140
+			],
+			"directors": [
+				1059578
+			],
+			"keywords": [
+				{
+					"id": 378,
+					"name": "prison"
+				},
+				{
+					"id": 3398,
+					"name": "release from prison"
+				},
+				{
+					"id": 9748,
+					"name": "revenge"
+				},
+				{
+					"id": 10511,
+					"name": "western"
+				},
+				{
+					"id": 155291,
+					"name": "cowboy"
+				},
+				{
+					"id": 155573,
+					"name": "wild west"
+				}
+			],
+			"genres": [
+				{
+					"id": 37,
+					"name": "서부"
+				}
+			]
+		}
+	},
+	{
+		"model": "movies.movie",
+		"fields": {
+			"adult": false,
+			"backdrop_path": "/mu8RKavbv7Ml48twHQ6XVk7zw8e.jpg",
+			"genre_ids": [
+				28,
+				80,
+				53
+			],
+			"id": 796499,
+			"original_language": "en",
+			"original_title": "Army of Thieves",
+			"overview": "작은 도시의 은행원에게 미스터리의 여인이 접근한다. 그녀가 건넨 위험한 제안. 철통같기로 이름난 유럽 전역의 금고를 털자는 것이다. \"아미 오브 더 데드\"의 프리퀄.",
+			"popularity": 1566.278,
+			"poster_path": "/iPTZGFmPs7HsXHYxiuxGolihjOH.jpg",
+			"release_date": "2021-10-27",
+			"title": "아미 오브 더 데드: 도둑들",
+			"video": false,
+			"vote_average": 7,
+			"vote_count": 741,
+			"actors": [
+				16808,
+				1251069,
+				229396,
+				1403559,
+				2037501,
+				129765,
+				1767809,
+				11248,
+				1781390,
+				1984784
+			],
+			"directors": [
+				16808
+			],
+			"keywords": [
+				{
+					"id": 1295,
+					"name": "europe"
+				},
+				{
+					"id": 6710,
+					"name": "interpol"
+				},
+				{
+					"id": 9675,
+					"name": "prequel"
+				},
+				{
+					"id": 12377,
+					"name": "zombie"
+				},
+				{
+					"id": 159339,
+					"name": "safecracker"
+				},
+				{
+					"id": 161966,
+					"name": "bank teller"
+				}
+			],
+			"genres": [
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 80,
+					"name": "범죄"
+				},
+				{
+					"id": 53,
+					"name": "스릴러"
+				}
 			]
 		}
 	},
@@ -1122,7 +1338,13 @@
 			"directors": [
 				1614750
 			],
-			"keywords": []
+			"keywords": [],
+			"genres": [
+				{
+					"id": 27,
+					"name": "공포"
+				}
+			]
 		}
 	},
 	{
@@ -1246,6 +1468,20 @@
 					"id": 266013,
 					"name": "vigilante justice"
 				}
+			],
+			"genres": [
+				{
+					"id": 28,
+					"name": "액션"
+				},
+				{
+					"id": 12,
+					"name": "모험"
+				},
+				{
+					"id": 14,
+					"name": "판타지"
+				}
 			]
 		}
 	},
@@ -1333,6 +1569,16 @@
 					"id": 256086,
 					"name": "spiderverse"
 				}
+			],
+			"genres": [
+				{
+					"id": 878,
+					"name": "SF"
+				},
+				{
+					"id": 28,
+					"name": "액션"
+				}
 			]
 		}
 	},
@@ -1340,77 +1586,50 @@
 		"model": "movies.movie",
 		"fields": {
 			"adult": false,
-			"backdrop_path": "/t9i5kSC6mYPRtc9hDlFeziLESa8.jpg",
+			"backdrop_path": "/pKgfWzxOpvGV3MQ0kLjLdjKAzUe.jpg",
 			"genre_ids": [
-				16,
-				35,
-				10751,
-				14
+				18,
+				80
 			],
-			"id": 876716,
-			"original_language": "en",
-			"original_title": "Ciao Alberto",
-			"overview": "디즈니 픽사 애니메이션 영화 [루카]의  속편으로 제작된  시퀄 단편영화",
-			"popularity": 1326.072,
-			"poster_path": "/buq1OIx6nGsknTy2cHxWTqKXVB.jpg",
-			"release_date": "2021-11-12",
-			"title": "챠오 알베르토",
+			"id": 785538,
+			"original_language": "pt",
+			"original_title": "7 Prisioneiros",
+			"overview": "시골에 있는 가족을 부양하기 위해 일자리를 얻은 소년. 그런데 곧 인신매매의 덫에 걸렸다는 사실을 깨닫는다. 소년은 살아남기 위해 도덕적 가치를 포기할 수 있을까.",
+			"popularity": 991.721,
+			"poster_path": "/5dCIBGXnIuPdP1gmlElEDMTcIGT.jpg",
+			"release_date": "2021-10-22",
+			"title": "7명의 포로",
 			"video": false,
-			"vote_average": 7.7,
-			"vote_count": 158,
+			"vote_average": 7.8,
+			"vote_count": 66,
 			"actors": [
-				1774679,
-				2990412,
-				1277188,
-				2077906
+				2172524,
+				17289,
+				1921253,
+				2991249,
+				54977
 			],
 			"directors": [
-				3242711
+				2114371
 			],
 			"keywords": [
 				{
-					"id": 658,
-					"name": "sea"
+					"id": 6019,
+					"name": "human trafficking"
 				},
 				{
-					"id": 1310,
-					"name": "mentor"
+					"id": 8041,
+					"name": "sao paulo, brazil"
+				}
+			],
+			"genres": [
+				{
+					"id": 18,
+					"name": "드라마"
 				},
 				{
-					"id": 1422,
-					"name": "boat"
-				},
-				{
-					"id": 173388,
-					"name": "dad"
-				},
-				{
-					"id": 223662,
-					"name": "ciao"
-				},
-				{
-					"id": 235070,
-					"name": "pasta"
-				},
-				{
-					"id": 262086,
-					"name": "luca"
-				},
-				{
-					"id": 263548,
-					"name": "short film"
-				},
-				{
-					"id": 274386,
-					"name": "silence"
-				},
-				{
-					"id": 282965,
-					"name": "genoa"
-				},
-				{
-					"id": 287663,
-					"name": "portorosso"
+					"id": 80,
+					"name": "범죄"
 				}
 			]
 		}
