@@ -6,4 +6,5 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = get_user_model()
-        fields = ('username', 'password', )
+        fields = ('username', 'password', 'followings', 'followers')
+        read_only_fields = ('followings', 'followers',)
