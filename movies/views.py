@@ -4,12 +4,14 @@ from django.contrib.auth import get_user_model
 from django.core.paginator import Paginator
 
 from rest_framework import status
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
 from .models import Movie
 from .serializers import MovieListSerializer, MovieDetailSerializer
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 
 @api_view(['GET'])
@@ -59,3 +61,13 @@ def movie_recommend(request):
 @api_view(['GET'])
 def recommend_movie_actors(request):
   pass
+
+
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes([IsAuthenticated])
+@api_view(['GET'])
+def movie_poster(request, movie_title):
+  movies = Movie.objects.filter(title=movie_title).order_by('-pk')
+  serializer= MovieListSerializer(movies, many=True)
+  return Response(serializer.data)
+  # 

@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth import get_user_model
 
 # @require_GET
 # def index(request):
@@ -89,3 +90,14 @@ def comment_detail_update_delete(request, review_pk, comment_pk):
         return Response({'message': f'{comment_pk}번 댓글이 정상적으로 삭제되었습니다.', 'id': comment_pk }, status=status.HTTP_204_NO_CONTENT)
     else:
       return Response({'error':'니가 쓴 댓글 아니잖아.'}, status=status.HTTP_401_UNAUTHORIZED)
+
+
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes([IsAuthenticated])
+@api_view(['GET'])
+def get(request, user_name):
+  User = get_user_model()
+  person = get_object_or_404(User, username=user_name)
+  reviews = Review.objects.filter(username_id=person.username).order_by('-pk')
+  serializer= ReviewSerializer(reviews, many=True)
+  return Response(serializer.data)

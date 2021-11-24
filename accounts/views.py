@@ -40,7 +40,7 @@ def signup(request):
 def profile(request, user_name):
     User = get_user_model()
     person = get_object_or_404(User, username=user_name)
-    reviews = person.review_set.all()
+    # reviews = person.article_username.all()
     serializer = UserSerializer(person)  # 인자 many=True
 
     return Response(serializer.data, status=status.HTTP_200_OK)

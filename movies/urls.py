@@ -12,4 +12,6 @@ urlpatterns = [
     
     path('movie_recommend/', views.movie_recommend),
     path('review_recommend/', views.review_recommend),
+
+    path('movie_poster/<str:movie_title>/', views.movie_poster),
 ]
