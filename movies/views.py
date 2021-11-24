@@ -70,3 +70,4 @@ def movie_poster(request, movie_title):
   movies = Movie.objects.filter(title=movie_title).order_by('-pk')
   serializer= MovieListSerializer(movies, many=True)
   return Response(serializer.data)
+  # 
