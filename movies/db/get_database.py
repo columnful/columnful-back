@@ -11,7 +11,7 @@ def get_movies_popular():
     movies_db = []
     actors_list_db = []
     directors_list_db = []
-    tmdb_helper = TMDBHelper('TMDB_API_KEY')
+    tmdb_helper = TMDBHelper('d96fad9400bff08e7653e874066ac99b')
 
     for i in range(1, 500):
         request_url = tmdb_helper.get_request_url(method = '/movie/popular', language = 'ko', page=i)
@@ -47,9 +47,9 @@ def get_movies_popular():
                     if director not in directors_list_db:
                         directors_list_db.append(director['id'])
 
-            data['actors'] = actors_list
-            data['directors'] = directors_list
-            data['keywords'] = keywords
+            # data['actors'] = actors_list
+            # data['directors'] = directors_list
+            # data['keywords'] = keywords
 
             # pdb.set_trace()
             results = {
@@ -64,7 +64,7 @@ def get_movies_popular():
 
 
 def get_people(person_ids, job_string):
-    tmdb_helper = TMDBHelper('TMDB_API_KEY')
+    tmdb_helper = TMDBHelper('d96fad9400bff08e7653e874066ac99b')
     people_db = []
 
     for person_id in person_ids:
@@ -101,6 +101,6 @@ if __name__ == '__main__':
     actors = get_people(actors_list, 'actor')
     directors = get_people(directors_list, 'director')
 
-    to_json('../fixtures/movies.json', movies)
-    to_json('../fixtures/actors.json', actors)
-    to_json('../fixtures/directors.json', directors)
+    to_json('../fixtures/movies_only.json', movies)
+    # to_json('../fixtures/actors.json', actors)
+    # to_json('../fixtures/directors.json', directors)
