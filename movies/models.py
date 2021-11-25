@@ -27,7 +27,7 @@ class Movie(models.Model):
     # id = models.IntegerField(primary_key=True)
     adult = models.BooleanField()
     backdrop_path = models.CharField(max_length=200)
-    genres_ids = models.ManyToManyField(Genre)
+    genre_ids = models.TextField(default=None)
     original_language = models.CharField(max_length=100)
     original_title = models.CharField(max_length=200)
     overview = models.TextField()
@@ -38,6 +38,7 @@ class Movie(models.Model):
     vote_average = models.FloatField()
     vote_count = models.IntegerField()
     like_user = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="like_movie", default=None)
+    video = models.BooleanField(default=False)
 
     # actors = models.ManyToManyField(Actor)
 
