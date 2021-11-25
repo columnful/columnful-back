@@ -1,4 +1,4 @@
-from .models import Genre, Movie, Actor, Director
+from .models import Movie, Actor, Director, Genre
 from rest_framework import serializers
 
 # class MovieTitleSerializer(serializers.ModelSerializer):
